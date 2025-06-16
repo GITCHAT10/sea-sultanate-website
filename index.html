@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,58 +6,79 @@
   <title>SEA SULTANATE MALDIVES</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Open Sans', sans-serif;
       background: #ffffff;
       color: #333;
+      padding-bottom: 60px;
     }
     header {
       background: linear-gradient(to right, #002b5c, #0077b6);
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
       color: white;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
     nav {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       background: #f5f5f5;
       padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      z-index: 1000;
     }
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
       color: #0077b6;
+      font-size: 0.9rem;
       font-weight: bold;
+    }
+    .section {
+      padding: 1.5rem;
+    }
+    .section h2 {
+      color: #002b5c;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
     .hero {
       background: url('https://cdn.pixabay.com/photo/2017/03/28/12/10/maldives-2187426_1280.jpg') center/cover no-repeat;
-      height: 80vh;
+      height: 50vh;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+    .contact p, .section ul, .section table {
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
-    .features, .fleet, .routes, .booking, .reviews, .contact {
-      margin-bottom: 4rem;
+    .section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .section table, th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       background: #002b5c;
       color: white;
+      font-size: 0.8rem;
     }
   </style>
 </head>
@@ -68,62 +88,67 @@
     <p>Boutique Marine Airline & Private Transfers Maldives</p>
   </header>
 
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#routes">Routes & Timetables</a>
-    <a href="#book">Book Transfers</a>
-    <a href="#fleet">Fleet</a>
-    <a href="#franchise">Franchise</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <div class="hero">
-    Book Your Island Transfer Now
+    Seamless Island Transfers, Daily
   </div>
 
-  <section id="about" class="features">
-    <h2>Why Choose SEA SULTANATE?</h2>
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Sea Sultanate Maldives is a boutique marine airline redefining island travel. Locally owned and operated, we provide scheduled transfers with luxury vessels, trained crew, and guaranteed seat availability. Safety, hospitality, and efficiency are at the heart of every journey.</p>
+  </section>
+
+  <section class="section" id="routes">
+    <h2>Routes & Timetables</h2>
+    <p>We connect Malé and Velana International Airport with key inhabited islands and resorts:</p>
     <ul>
-      <li>Boutique Marine Airline</li>
-      <li>VIP Personalized Services</li>
-      <li>Guaranteed Seats</li>
-      <li>Direct Airport to Island Transfers</li>
-      <li>Daily Scheduled Routes</li>
-      <li>Franchise & Private Fleet Options</li>
+      <li>Omadhoo</li>
+      <li>Mahibadhoo</li>
+      <li>Hangnaameedhoo</li>
+      <li>Kunburudhoo</li>
     </ul>
+    <table>
+      <tr><th>From</th><th>To</th><th>Departure</th><th>Arrival</th><th>Frequency</th></tr>
+      <tr><td>Malé</td><td>Omadhoo</td><td>10:00 AM</td><td>12:00 PM</td><td>Daily</td></tr>
+      <tr><td>Omadhoo</td><td>Malé</td><td>4:00 PM</td><td>6:00 PM</td><td>Daily</td></tr>
+    </table>
   </section>
 
-  <section id="fleet" class="fleet">
-    <h2>Our Fleet</h2>
-    <p>Tour Guard 38, Gulf Craft 38, and custom private yachts designed for luxury, safety, and performance across the Maldivian archipelago.</p>
+  <section class="section" id="book">
+    <h2>Book Transfers</h2>
+    <p>Reserve your seat in three simple steps:</p>
+    <ul>
+      <li>Select your route and travel date</li>
+      <li>Choose your seat and enter details</li>
+      <li>Pay online and receive QR code confirmation</li>
+    </ul>
+    <p>Secure payments via BML, Visa, and MasterCard. Loyalty points apply to all bookings.</p>
   </section>
 
-  <section id="routes" class="routes">
-    <h2>Where We Sail</h2>
-    <p>Daily transfers to Omadhoo, Mahibadhoo, Hangnaameedhoo, Kunburudhoo, and more. Real-time route map and interactive schedule available.</p>
+  <section class="section" id="fleet">
+    <h2>Fleet</h2>
+    <p>Our vessels include the Tour Guard 38, Gulf Craft 38, and custom private crafts with GPS tracking, onboard crew, and premium interiors. Designed for safety, comfort, and all-weather operations.</p>
   </section>
 
-  <section id="book" class="booking">
-    <h2>Book Your Transfer</h2>
-    <p>Choose your route, select your seat, pay online, and receive instant confirmation with your boarding QR code.</p>
+  <section class="section" id="franchise">
+    <h2>Franchise</h2>
+    <p>Own a boat or guesthouse? Join the Sea Sultanate franchise program and become part of our expanding marine network. Full access to bookings, fleet tools, and co-branded services.</p>
   </section>
 
-  <section id="franchise">
-    <h2>Franchise & Partnerships</h2>
-    <p>Join the SEA SULTANATE network. Vessel owners, hotels, and investors welcome. Expand with our brand and booking engine.</p>
+  <section class="section contact" id="contact">
+    <h2>Contact</h2>
+    <p>📍 Jetty 4, Malé | Counter B, Velana Intl. Airport<br>
+    📞 +960 XXX XXXX<br>
+    📱 WhatsApp (Live Support)<br>
+    ✉️ hello@seasultanate.com</p>
   </section>
 
-  <section id="reviews" class="reviews">
-    <h2>What Guests Say</h2>
-    <blockquote>
-      “Absolutely the most seamless transfer in the Maldives. Like flying business class on water.” — Emma L.
-    </blockquote>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact & Support</h2>
-    <p>📞 +960 XXX XXXX<br>📱 WhatsApp: Live Agent<br>✉️ hello@seasultanate.com<br>📍 Jetty 4, Male' | Counter B, Velana Intl. Airport</p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#routes">Routes</a>
+    <a href="#book">Book</a>
+    <a href="#fleet">Fleet</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <footer>
     &copy; 2025 SEA SULTANATE MALDIVES. All rights reserved.
