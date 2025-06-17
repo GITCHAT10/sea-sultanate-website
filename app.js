@@ -4,11 +4,11 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files (like index.html) from current directory
+// Serve static files (like index.html, CSS, JS, etc.) from current directory
 app.use(express.static(__dirname));
 
-// Route to serve index.html
-app.get('/', (req, res) => {
+// Always serve index.html for any unmatched route (especially useful for anchor routes)
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
