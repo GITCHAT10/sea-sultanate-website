@@ -1,8 +1,17 @@
+const express = require('express');
+const path = require('path');
 
-const AWS = require('aws-sdk');
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-console.log("Worker started...");
+// Serve static files (like index.html) from current directory
+app.use(express.static(__dirname));
 
-setInterval(() => {
-  console.log("Processing task...");
-}, 5000);
+// Route to serve index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`✅ Server running at http://localhost:${PORT}`);
+});
