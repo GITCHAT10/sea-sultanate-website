@@ -6,6 +6,9 @@
   <title>SEA SULTANATE DIGITAL ECOSYSTEM</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -37,14 +40,14 @@
       text-decoration: underline;
     }
     section {
-      scroll-margin-top: 100px;
       padding: 2rem;
       max-width: 960px;
       margin: auto;
-      background: white;
       margin-top: 2rem;
+      background: white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      scroll-margin-top: 80px; /* 👈 this fixes the scroll positioning */
     }
     h2 {
       color: #003d5b;
