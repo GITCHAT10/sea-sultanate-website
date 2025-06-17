@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEA SULTANATE DIGITAL ECOSYSTEM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -25,8 +26,9 @@
       background: #005377;
       padding: 1rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -43,11 +45,11 @@
       padding: 2rem;
       max-width: 960px;
       margin: auto;
-      margin-top: 2rem;
       background: white;
+      margin-top: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      scroll-margin-top: 80px; /* 👈 this fixes the scroll positioning */
+      scroll-margin-top: 100px; /* Offset for sticky nav */
     }
     h2 {
       color: #003d5b;
@@ -68,6 +70,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>SEA SULTANATE MALDIVES</h1>
     <p>Smart Multimodal Transport & Marine Operations Platform</p>
@@ -75,9 +78,9 @@
 
   <nav>
     <a href="#core">Core Platform</a>
-    <a href="#transfer">Transfer Management</a>
+    <a href="#transfer">Transfer</a>
     <a href="#passenger">Passenger</a>
-    <a href="#hotel">Hotel Portal</a>
+    <a href="#hotel">Hotel</a>
     <a href="#crew">Crew</a>
     <a href="#finance">Finance</a>
     <a href="#marine">Marine Ops</a>
@@ -97,8 +100,8 @@
   <section id="transfer">
     <h2>2️⃣ Transfer Management</h2>
     <ul>
-      <li>✅ Daily timetable engine (routes: Omadhoo, Mahibadhoo, Hangnaameedhoo, Kunburudhoo)</li>
-      <li>✅ Route map and booking engine (Scheduled, Private Charter, Ride Share)</li>
+      <li>✅ Daily timetable engine (routes: Omadhoo, Mahibadhoo, etc.)</li>
+      <li>✅ Route map and booking engine</li>
       <li>✅ Live seat inventory + dynamic pricing</li>
     </ul>
   </section>
@@ -106,62 +109,57 @@
   <section id="passenger">
     <h2>3️⃣ Passenger Management</h2>
     <ul>
-      <li>✅ Profiles, history, multi-passenger bookings</li>
+      <li>✅ Profiles, history, bookings</li>
       <li>✅ Loyalty & rewards system</li>
-      <li>✅ Cancellation, rebooking, refund flows</li>
       <li>✅ SOS button connected to Coast Guard</li>
-      <li>✅ Baggage module (expandable)</li>
     </ul>
   </section>
 
   <section id="hotel">
     <h2>4️⃣ Hotel & Agent Portal</h2>
     <ul>
-      <li>✅ Login panel for hotels & agents</li>
+      <li>✅ Login for hotels & agents</li>
       <li>✅ Allotment-based seat management</li>
-      <li>✅ Daily manifest, bookings, and commission view</li>
-      <li>✅ Extra service pre-booking: Greet & Meet, F&B, Porter</li>
+      <li>✅ Pre-booking services</li>
     </ul>
   </section>
 
   <section id="crew">
-    <h2>5️⃣ Crew & Operations Module</h2>
+    <h2>5️⃣ Crew & Ops Module</h2>
     <ul>
-      <li>✅ Vessel assignment & reporting</li>
-      <li>✅ Captain/Crew login with trip updates</li>
-      <li>✅ Performance and fuel tracking</li>
+      <li>✅ Vessel assignment & trip updates</li>
+      <li>✅ Performance tracking</li>
     </ul>
   </section>
 
   <section id="finance">
     <h2>6️⃣ Financial System</h2>
     <ul>
-      <li>✅ Invoicing, tax receipts (Maldives format)</li>
-      <li>✅ Visa, MasterCard, BML Gateway integrations</li>
-      <li>✅ Partner revenue sharing, profit dashboard</li>
+      <li>✅ Invoicing & tax receipts</li>
+      <li>✅ Payment gateway integration</li>
+      <li>✅ Profit sharing dashboards</li>
     </ul>
   </section>
 
   <section id="marine">
-    <h2>8️⃣ Marine Operations</h2>
+    <h2>8️⃣ Marine Ops</h2>
     <ul>
-      <li>✅ GPS tracking, docking reservation</li>
-      <li>✅ Vessel maintenance logs & incident reporting</li>
-      <li>✅ Daily operational report automation</li>
+      <li>✅ GPS, docking, maintenance</li>
+      <li>✅ Incident reporting</li>
     </ul>
   </section>
 
   <section id="shop">
-    <h2>🔟 SS Marine Online Shop</h2>
+    <h2>🔟 SS Marine Shop</h2>
     <ul>
-      <li>✅ Marine parts, accessories store</li>
-      <li>✅ Vendor panel, payment integration</li>
-      <li>✅ Order tracking & delivery system</li>
+      <li>✅ Marine parts store</li>
+      <li>✅ Vendor portal & delivery system</li>
     </ul>
   </section>
 
   <footer>
     &copy; 2025 SEA SULTANATE DIGITAL INFRASTRUCTURE — Powered by Smart Mobility for the Maldives.
   </footer>
+
 </body>
 </html>
