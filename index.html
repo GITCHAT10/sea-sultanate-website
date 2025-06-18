@@ -54,7 +54,7 @@
       background: white;
       margin-top: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
       scroll-margin-top: 100px;
     }
 
@@ -77,7 +77,7 @@
       font-size: 0.9rem;
     }
 
-    /* ✅ Fix invisible overlays that block interaction */
+    /* 🔒 Fix hidden overlays from interfering with clicks */
     [data-radix-focus-guard],
     div[style*="opacity: 0"][style*="position: fixed"] {
       display: none !important;
@@ -178,10 +178,12 @@
     &copy; 2025 SEA SULTANATE DIGITAL INFRASTRUCTURE — Powered by Smart Mobility for the Maldives.
   </footer>
 
-  <!-- ✅ Auto-remove invisible overlays if they ever reappear -->
+  <!-- JavaScript: continuously remove overlays that block interaction -->
   <script>
     const removeOverlay = () => {
-      const overlays = document.querySelectorAll('div[style*="opacity: 0"][style*="position: fixed"], [data-radix-focus-guard]');
+      const overlays = document.querySelectorAll(
+        'div[style*="opacity: 0"][style*="position: fixed"], [data-radix-focus-guard]'
+      );
       overlays.forEach(el => {
         el.style.display = 'none';
         el.style.pointerEvents = 'none';
