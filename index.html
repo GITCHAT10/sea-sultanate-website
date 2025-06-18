@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEA SULTANATE DIGITAL ECOSYSTEM</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -54,7 +55,7 @@
       margin-top: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      scroll-margin-top: 100px; /* Ensures sections aren't hidden by sticky nav */
+      scroll-margin-top: 100px;
     }
 
     h2 {
@@ -76,9 +77,12 @@
       font-size: 0.9rem;
     }
 
-    /* Fix for invisible overlays blocking clicks */
-    [data-radix-focus-guard] {
+    /* ✅ Fix for invisible overlays blocking clicks */
+    [data-radix-focus-guard],
+    div[style*="position: fixed"][style*="opacity: 0"] {
       display: none !important;
+      pointer-events: none !important;
+      position: static !important;
     }
   </style>
 </head>
