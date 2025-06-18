@@ -77,9 +77,9 @@
       font-size: 0.9rem;
     }
 
-    /* ✅ Fix for invisible overlays blocking clicks */
+    /* Extra overlay protection */
     [data-radix-focus-guard],
-    div[style*="position: fixed"][style*="opacity: 0"] {
+    div[style*="opacity: 0"][style*="position: fixed"] {
       display: none !important;
       pointer-events: none !important;
       position: static !important;
@@ -177,6 +177,21 @@
   <footer>
     &copy; 2025 SEA SULTANATE DIGITAL INFRASTRUCTURE — Powered by Smart Mobility for the Maldives.
   </footer>
+
+  <!-- ✅ JavaScript to keep removing invisible overlays -->
+  <script>
+    const removeOverlay = () => {
+      const ghostOverlays = document.querySelectorAll('div[style*="opacity: 0"][style*="position: fixed"], [data-radix-focus-guard]');
+      ghostOverlays.forEach(el => {
+        el.style.display = 'none';
+        el.style.pointerEvents = 'none';
+        el.style.position = 'static';
+      });
+    };
+
+    removeOverlay();
+    setInterval(removeOverlay, 500);
+  </script>
 
 </body>
 </html>
